@@ -1,0 +1,340 @@
+async function enviarScript(scriptText){
+	const lines = scriptText.split(/[\n\t]+/).map(line => line.trim()).filter(line => line);
+	main = document.querySelector("#main"),
+	textarea = main.querySelector(`div[contenteditable="true"]`)
+	
+	if(!textarea) throw new Error("Não há uma conversa aberta")
+	
+	for(const line of lines){
+		console.log(line)
+	
+		textarea.focus();
+		document.execCommand('insertText', false, line);
+		textarea.dispatchEvent(new Event('change', {bubbles: true}));
+	
+		setTimeout(() => {
+			(main.querySelector(`[data-testid="send"]`) || main.querySelector(`[data-icon="send"]`)).click();
+		}, 1000);
+		
+		if(lines.indexOf(line) !== lines.length - 1) await new Promise(resolve => setTimeout(resolve, 2500));
+	}
+	
+	return lines.length;
+}
+
+// for (let contador = 0; contador <= 20; contador++){
+enviarScript(`
+
+*Pablo Marçal* é casado com Ana Carolina Marçal e pai do Lorenzo, Benjamin, Miguel e da Isabela e segundo ele, em seu blog, nasceu para ativar o propósito das pessoas que, eventualmente, se conectam a ele.
+Pablo diz que destravou os códigos da prosperidade e do governo da alma através da sua conexão com a fonte.
+Ele tem um grande desejo de buscar ajudar o máximo possível de pessoas a prosperarem em suas vidas ensinando os métodos e técnicas que desenvolveu e aplicou ao longo de sua vida.
+ 
+Cuidado com os sonhos cerebrais eles são fantasiosos, busque os sonhos da sua alma ela sim sabe.
+A sua alma tem saudade de coisas que seus olhos nunca viram, cuidado com sonhos que estão dentro do seu celebro, eles foram programados por outra pessoa.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+⁠Fase não é a sua identidade.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+⁠O perdão é pra quem não merece.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+⁠O seu bloqueio, tem haver com seu propósito.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+A sorte só te encontra no caminho. A sorte nunca acordou ninguém.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+⁠É diante dos maiores problemas que surgem as melhores ideias.
+E é diante das piores crises que surgem as melhores oportunidades.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+⁠Ame problemas!
+Pois quem ama problemas, também ama recompensas.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+⁠⁠É preciso parar de pensar se as coisas irão funcionar ou não para ter a coragem de tomar novas atitudes e avançar na vida.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+O primeiro⁠ que acorda salva todo mundo.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+O mais sábio vai se adaptar a qualquer situação.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se eu prospero num ambiente invejoso, minha prosperidade denuncia a inveja e escassez dessas pessoas.⁠
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+⁠98% das pessoas estão paralisadas pelo medo e os 2% dos destemidos governam a Terra.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Troque tentativa por teste, pois, a tentativa é ensaio para a ação.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Eu nunca perco ou ganho quando eu aprendo.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+As pessoas são doutrinadas a não esquecer nada.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Pai, padre, pastor, padrasto, professor, político, parente, padrinho e patrão, enfim, tome cuidado com todos estes P de programadores. (desprogramadores)*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Eu nasci pra ir mais longe e romper as barreiras dos meus pais.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+O medo é uma fé negativa.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Eu preciso largar o bom para viver o extraordinário.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Faça lista do bom que você tem e troque pelo extraordinário.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Meu sonho é do tamanho da minha crença
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+A vida é feita de decisões.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se você continuar decidindo a sua vida com o cérebro continuará escravo dos outros, da família, cidade, CLT e das amizades.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+A visão é progressiva
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Sonhos são humanos e visão é eterna
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+A energia muda o ambiente
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+O que faz a pessoa não prosperar é achar que tem uma única opção.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Atitudes criam oportunidades e riqueza
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Oportunidade se cria com atitude.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Os seus sonhos dependem das sua crenças.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Decisões difíceis pode ter uma vida fácil.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Não foi ninguém que te trouxe aqui e sim o senhor.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Aprenda: Decisões, ações e repetições
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Mude a sua realidade deixando tudo o que é velho para trás.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Ande em tribo onde as pessoas buscam a mesma coisa, pois, o problema é que em tua volta cada um quer uma coisa e por isto você não prospera.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Desfrute, pois, desfrutar não é curtição como praias ou baladas e sim estar com as pessoas que estão em sua volta.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Todos os seus pensamentos são de governo ou de escravo? Análise isto! Se você acordou desanimado anote o sentimento.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Platô significa que você parou de caminhar e ficou estagnado, então, o que tem que fazer? Quebrar este negócio.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Na escassez o dinheiro controla as pessoas, mas na verdade ele tem que ser escravo daquela pessoa. O maior nível de escassez é quando o dinheiro toma conta de corpo e da alma da pessoa.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+A escassez tem níveis. A primeira é a bola do saco do teu pai, depois vem o útero da sua mãe e logo após vem o ambiente em sua volta que instalou a escassez em você.
+Este último você tem que repudiar o que a sua família disse, ou seja, as pessoas que teve autoridade sobre você. Esta camada é a mais difícil, pois, você tem que romper com as pessoas que estão em tua volta.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se eu floresço no deserto da adversidade, minhas pétalas revelam a resistência que as tempestades não podem quebrar. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Na trama do sucesso, meu fio de determinação desafia qualquer nó de desânimo. 
+⁠*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Em um oceano de dúvidas, minha bússola interior aponta sempre para a confiança inabalável.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se meu caminho é iluminado pela luz da autenticidade, as sombras da falsidade não podem me alcançar.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Cada passo que dou na estrada da excelência é um eco ensurdecedor contra as murmurações da mediocridade. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Quando semear amor em solo árido, minhas colheitas serão um testemunho vivo da fertilidade que é o coração humano.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+A música da minha jornada ressoa mais alto que as críticas emudecidas pelo som do meu sucesso.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se as pedras da inveja são lançadas no meu caminho, eu construo com elas o alicerce do meu triunfo. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Na dança da vida, meus passos são coreografados pela graça, e as sombras da inveja não podem seguir meu ritmo. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+No teatro da realização, meu palco é erguido sobre os alicerces inabaláveis da autenticidade e integridade. ⁠
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Quando planto sementes de positividade, colho jardins onde a negatividade murcha diante da minha luz.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+A estrada para o sucesso é pavimentada com a confiança que anula o barulho das dúvidas. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se minhas conquistas ecoam alto, é porque os aplausos da determinação ressoam mais do que as palmas da inveja.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Cada desafio superado é uma ponte construída sobre os abismos da desconfiança alheia.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se meu coração é um farol, sua luz dissipa as sombras daqueles que tentam obscurecer minha jornada. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+O tecido da minha história é entrelaçado com fios de resiliência que resistem aos rasgos da inveja. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Na sinfonia da realização, as notas da minha persistência ressoam mais alto do que as discordâncias daqueles que duvidam. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se minha trajetória é um livro, suas páginas são escritas com tinta indestrutível de determinação. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Nas asas da ambição, alcanço alturas onde a sombra da inveja não pode seguir meu voo. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Cada passo em direção ao meu destino é uma afirmação audível contra as negações sussurradas pela descrença. ⁠ *Pablo Marçal*
+Se a maré da inveja tenta me arrastar, sou ancorado pela fortaleza das minhas realizações. ⁠ https://pabloorei.vercel.app
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Na tapeçaria do sucesso, cada fio da minha dedicação é um antidoto contra os venenos da desconfiança. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se minha luz ofusca os olhos daqueles que duvidam, é porque meu brilho é uma chama inextinguível. ⁠ *Pablo Marçal*
+Cada desafio superado é um degrau que escalo, deixando para trás as sombras que tentam me seguir. ⁠ https://pabloorei.vercel.app
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se meu jardim floresce em solo árido, é porque minhas raízes são profundas e inabaláveis. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Na orquestra da vida, minhas notas de sucesso ressoam mais alto do que os acordes da inveja. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Cada conquista é uma estrela que brilha na escuridão, guiando-me pelo caminho da realização. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se eu construo castelos com os tijolos da adversidade, as muralhas da inveja não podem derrubá-los.
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Na trilha do triunfo, meu caminho é marcado pelas pegadas da determinação que calçam a areia movediça da descrença. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se minhas asas alcançam alturas inimagináveis, é porque a inveja é incapaz de encurtar meu voo. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+A estrada da realização é pavimentada com as pedras da perseverança, resistindo aos tremores causados pela inveja. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se eu planto sementes de esperança, colho campos onde as ervas daninhas da inveja não conseguem prosperar. ⁠
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+No labirinto da incerteza, minha bússola interior é ajustada para apontar sempre na direção da confiança. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se minhas raízes afundam profundamente no solo da autenticidade, nenhum vento da falsidade pode me derrubar. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Na arena da vida, sou um gladiador que enfrenta os leões da adversidade com a lança da determinação. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Cada desafio vencido é uma página virada no livro da minha jornada, narrando a saga da superação. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+Se minha luz eclipsa as sombras da inveja, é porque meu brilho é uma constante no firmamento da realização. ⁠ 
+*Pablo Marçal*
+https://pabloorei.vercel.app
+
+
+
+`).then(e => console.log(`Código finalizado, ${e} mensagens enviadas`)).catch(console.error)
+// }
